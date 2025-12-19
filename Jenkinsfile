@@ -1,12 +1,11 @@
+
 pipeline {
-    agent {
-        docker { image 'python:3.11-slim' } // Utilise une image Docker avec Python
-    }
+    agent any
 
     stages {
         stage('Run tests') {
             steps {
-                sh 'python3 test_calculs.py' // Lance les tests
+                sh 'python3 test_calculs.py'
             }
         }
     }
